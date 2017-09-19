@@ -1,0 +1,1141 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+
+
+//class prefix embb- 
+.embb-box{
+    overflow: hidden;
+    display: block;
+    position: relative;
+    
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.27);
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.27);
+    @include coverbg('');
+    background-color: #fff;
+    h1,h2,h3,h4,h5,h6{
+        line-height: 1;
+    }
+    .embb-title{
+        text-transform: uppercase;
+        color: #000;
+    }
+    &.embb-rectangle{
+        padding-bottom: calc(100%/57*37);
+    }
+    .embb-center{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+    }
+    .embb-boder-block{
+        border: solid 1px $primary-color;
+        color: $primary-color;
+        display: inline-block;
+        min-width: 120px;
+        text-align: center;
+        padding: 2px 5px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+    .img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include coverbg('');
+        @include transition(.7s);
+    }
+    .embb-capt{
+        font-family: $font-c;
+        text-transform: capitalize;
+        color: $primary-color;
+    }
+    .embb-tt-lv1{
+        font-size: 30px;
+    }
+    .embb-tt-lv2{
+            font-size: 14px;
+    }
+    .embb-fs36{
+        font-size: 36px;
+    }
+    .embb-fs48{
+        font-size: 48px;
+    }
+}
+.embb-inner{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+   
+    &.border-off30{
+        border: solid 1px #959595;
+        top: 30px;
+        left: 30px;
+        bottom: 30px;
+        right: 30px;
+    }
+    &.border-off30-46{
+        border: solid 1px #959595;
+        top: 30px;
+        left: 46px;
+        bottom: 30px;
+        right: 46px;
+    }
+    &.border-off45{
+        border: solid 1px #959595;
+        top: 45px;
+        left: 45px;
+        bottom: 45px;
+        right: 45px;
+    }
+}
+.embb-style1{
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    bottom: 26px;
+    right: 26px;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    
+    .img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        @inlcude coverbg('');
+        @include transition(.7s);
+    }
+    .info{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        .embb-title{
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            color: inherit;
+            @include transition(.7s);
+        }
+    }
+    
+}
+.embb-style2{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    height: calc(100% + 2px);
+    margin-top: -1px;
+    .embb-above{
+        overflow: hidden;
+        img{
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .embb-title{
+        .embb-tt-lv1{
+            font-weight: normal;
+            font-size: 30px;
+            color: $primary-color;
+            letter-spacing: 5.5px;
+        }
+        .embb-tt-lv2{
+            font-weight: bold;
+            color: #000;
+        }
+    }
+    .embb-last{
+        
+    }
+}
+.embb-style3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .embb-center{
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+        @include transition(.7s);
+    }
+}
+.embb-style4{
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    .embb-item{
+        width: 50%;
+        height: 50%;
+        @include coverbg('');
+        position: relative;
+        &.bg1{
+            background-image: url(../images/style4-img-1.jpg);
+        }
+        &.bg2{
+            background-image: url(../images/style4-img-2.jpg);
+        }
+        .embb-capt{
+            text-transform: none;
+            font-family: $font-c;
+            font-size: 18px;
+            color: $primary-color;
+            background: url(../images/style4-decor.png) no-repeat;
+            width: 143px;
+            height: 29px;
+            letter-spacing: 4px;
+        }
+        .embb-tt-lv1{
+            letter-spacing: 2px;
+        }
+    }
+}
+.embb-style5{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    float: left;
+    .embb-left-tt{
+        float: left;
+        width: 50%;
+        color: #000;
+        
+        position: relative;
+        top: 50%;
+        transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+        .embb-capt{
+            font-size: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+        .embb-fs36{
+            color: $primary-color;
+            font-weight: normal;
+            margin-bottom: 20px;
+            span{
+                color: #000;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
+    .embb-right-img{
+        float: right;
+        width: 50%;
+        img{
+            display: block;
+            max-width: 100%;
+            margin-bottom: 15px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.embb-style6{
+    @include coverbg('');
+    background-image: url(../images/style6-bg.jpg);
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    bottom: 15px;
+    right: 15px;
+    @include transition(.7s);
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        bottom: 10px;
+        right: 10px;
+        border: solid 1px #959595;
+        @include transition(.7s);
+    }
+    .embb-title{
+        position: absolute;
+        font-weight: normal;
+        padding: 20px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: $primary-color;
+        letter-spacing: 4px;
+        strong{
+            color: #000;
+        }
+    }
+}
+.embb-style7{
+    @include coverbg('');
+    background-image: url(../images/style7-bg.jpg);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    .embb-btn{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+        -webkit-transform: translate(-50%,0);
+    }
+    .embb-tt-lv1{
+        font-family: $font-p;
+        letter-spacing: 6px;
+        color: $primary-color;
+        border: solid 1px #fff;
+        padding: 7px 12px;
+        font-weight: 500;
+        span{
+            display: block;
+            background-color: #fff;
+            line-height: 40px;
+            padding: 10px;
+            min-width: 290px;
+            text-align: center;
+        }
+    }
+}
+.embb-style8{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 14px;
+    .item{
+        @include coverbg('');
+        padding: 1px;
+        float: left;
+        width: 100%;
+        height: calc(100%/3);
+        overflow: hidden;
+        img{
+            display: block;
+            @include transition(.7s);
+        }
+        &.w30{
+            width: 28%;
+        }
+        &.w70{
+            width: 72%;
+        }
+    }
+    
+}
+.embb-style9{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    .img{
+        @include coverbg('');
+        background-image: url(../images/style9-bg.jpg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        @include transition(.7s);
+    }
+    &:before{
+        content: '';
+        top: 30px;
+        bottom: 30px;
+        width: 360px;
+        max-width: 80%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        -webkit-transform: translate(-50%,0);
+        border: solid 2px #000;
+    }
+    .embb-title{
+        position: absolute;
+        bottom: 60px;
+        padding: 0 15px;
+        text-align: center;
+        width: 100%;
+        .embb-tt-lv1{
+            font-size: 24px;
+            line-height: 30px;
+            padding: 10px 15px;
+            font-weight: normal;
+            color: $primary-color;
+            margin: 0 auto;
+            margin-bottom: 14px;
+            background-color: #fff;
+            display: block;
+            width: 445px;
+            max-width: 100%;
+            
+        }
+    }
+    .embb-btn{
+        min-width: 150px;
+    }
+}
+.embb-style10{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    left: 0;
+    @include coverbg('');
+    &:before{
+        content: '';
+        background-color: rgba(#fff,.5);
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        display: block;
+        position: absolute;
+        @include transition(.3s);
+    }
+    &:after{
+        content: '';
+        display: block;
+        border: solid 1px #959595;
+        top: 30px;
+        left: 30px;
+        bottom: 30px;
+        right: 30px;
+        position: absolute;
+        @include transition(.3s);
+    }
+    .embb-center{
+        width: 450px;
+        height: 250px;
+        max-width: calc(100% - 100px);
+        max-height: calc(100% - 100px);
+        @include coverbg('');
+    }
+}
+.embb-style11{
+    @include coverbg('');
+    background-image: url(../images/style11-bg.png);
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    bottom: 30px;
+    right: 30px;
+    .embb-capt{
+        font-size: 24px;
+        letter-spacing: 2px;
+        color: $primary-color;
+    }
+}
+.embb-style12{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #000;
+    >.img{
+        @include coverbg('');
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include transition(.7s);
+    }
+    .embb-title{
+        font-size: 60px;
+        letter-spacing: 4px;
+        margin-bottom: 17px;
+        color: inherit;
+    }
+    .embb-btn{
+        border-top: solid 1px $primary-color;
+        border-bottom: solid 1px $primary-color;
+        border-left: 0 none;
+        border-right: 0 none;
+        min-width: 337px;
+        background-color: transparent;
+        height: 30px;
+        line-height: 20px;
+        padding: 5px 0;
+        letter-spacing: 5.5px;
+        font-weight: normal
+    }
+}
+.embb-style13{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    >img{
+        @include transition(.7s);
+        position: absolute;
+        &:nth-child(1){
+            top: -15px;
+            left: 30px;
+        }
+        &:nth-child(2){
+            top: -15px;
+            right: 50px;
+        }
+        &:nth-child(3){
+            bottom: -12px;
+            left: 45px;
+        }
+        &:nth-child(4){
+            bottom: -12px;
+            right: 45px;
+        }
+    }
+    .embb-capt{
+        background: url(../images/style13-decor.png) no-repeat;
+        width: 210px;
+        height: 56px;
+        text-align: center;
+        color: $primary-color;
+        font-size: 30px;
+        letter-spacing: 2px;
+        line-height: 1.5;
+    }
+}
+.embb-style14{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    >.img{
+        @include coverbg('');
+        @include transition(.7s);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    >.embb-center{
+        width: 430px;
+        height: 320px;
+        max-width: calc(100% - 60px);
+        max-height: calc(100% - 30px);
+        background-color: rgba(#fff,.5);
+        border-left: solid 1px #000;
+        border-right: solid 1px #000;
+    }
+    .embb-capt{
+        font-size: 20px;
+        color: $primary-color;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+    .embb-title{
+        font-size: 60px;
+        letter-spacing: 4px;
+        font-weight: normal;
+        color: #000;
+    }
+    .embb-btn{
+        width: 165px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,0);
+        -webkit-transform: translate(-50%,0);
+    }
+}
+.embb-style15{
+    @include coverbg('');
+    background-image: url(../images/style15-bg.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .embb-center{
+        background: url(../images/style15-img.png) no-repeat;
+        background-size: contain;
+        width: 318px;
+        height: 300px;
+        max-width: 90%;
+        max-height: 90%;
+        
+    }
+    .embb-title{
+        white-space: pre-line;
+        color: #fff;
+        font-weight: normal;
+        line-height: 40px;
+        letter-spacing: 2px;
+        position: relative;
+        top: 50%;
+        transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+    }
+}
+.embb-style16{
+    @include coverbg('');
+    background-image: url(../images/style16-bg.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    >.embb-center{
+        width: 404px;
+        height: 320px;
+        max-width: calc(100% - 15px);
+        max-height: calc(100% - 15px);
+        border: solid 1px #898989;
+        padding: 10px 30px;
+        .inner{
+            background-color: #fff;
+            position: relative;
+            height: 100%;
+            padding-bottom: 10px;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-flex-wrap: nowrap;
+-ms-flex-wrap: nowrap;
+flex-wrap: nowrap;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+-webkit-align-content: stretch;
+-ms-flex-line-pack: stretch;
+align-content: stretch;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                bottom: 10px;
+                right: 10px;
+                border: solid 1px #898989;
+            }
+            .embb-above{
+                
+            }
+            .embb-middle{
+                
+            }
+            .embb-capt{
+                font-size: 20px;
+                letter-spacing: 1px;
+                color: $primary-color;
+                margin-bottom: 5px;
+            }
+            .embb-title{
+                font-weight: normal;
+                font-size: 24px;
+                color: #000;
+                strong{
+                    display: block;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.embb-style17{
+    @include coverbg('');
+    background-image: url(../images/style17-bg.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    >.embb-center{
+        width: 404px;
+        height: 304px;
+        max-width: calc(100% - 15px);
+        max-height: calc(100% - 15px);
+        z-index: 1;
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border: solid 1px #898989;
+            opacity: .5;
+            z-index: -1;
+        }
+        &:before{
+            transform: translate(10px, -5px);
+          
+        }
+        &:after{
+            transform: translate(-10px, 5px)
+        }
+        .sub-capt{
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $primary-color;
+            margin-bottom: 5px;
+        }
+        .embb-title{
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            line-height: 36px;
+        }
+    }
+}
+.embb-style18{
+    @include coverbg('');
+    background-image: url(../images/style18-bg.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    padding-left: 45%;
+    z-index: 1;
+    .img{
+        z-index: -1;
+    }
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        bottom: 30px;
+        right: 30px;
+        border: solid 1px #898989;
+    }
+    .inner{
+        position: relative;
+        top: 50%;
+        transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+    }
+    .embb-capt{
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 1;
+    }
+    .embb-title{
+        font-weight: normal;
+        font-size: 30px;
+        margin-bottom: 12px;
+    }
+}
+.embb-style19{
+    @include coverbg('');
+    background-image: url(../images/style19-bg.jpg);
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    bottom: 23px;
+    right: 23px;
+    padding: 43px;
+    color: #fff;
+    z-index: 1;
+    .img{
+        z-index: -1;
+    }
+    &:before{
+        content: '';
+        border: solid 8px #fff;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        bottom: 20px;
+        right: 20px;
+        
+    }
+    .inner{
+        max-width: calc(100% - 43px);
+        max-height: calc(100% - 43px);
+    }
+    .embb-capt{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .embb-title{
+        color: inherit;
+        font-size: 40px;
+        white-space: pre-line;
+        margin-bottom: 15px;
+    }
+    .embb-btn{
+        min-width: 133px;
+        
+    }
+}
+.embb-style20{
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        @include transition(.7s);
+        
+    }
+    &:before{
+        border-top: solid 1px $primary-color;
+        border-bottom: solid 1px $primary-color;
+        transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+    }
+    &:after{
+        border-left: solid 1px $primary-color;
+        border-right: solid 1px $primary-color;
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+    }
+    >img.embb-center{
+        display: block;
+        padding: 0;
+    }
+    .embb-top{
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 40px;
+        padding: 0 30px;
+    }
+    .embb-btm{
+        position: absolute;
+        z-index: 1;
+        right: 50%;
+        bottom: 30px;
+        padding: 0 30px;
+    }
+    .embb-title{
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .sub-capt{
+        text-transform: uppercase;
+        color: $primary-color;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+    .embb-capt{
+        color: #000;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+}
+.embb-rectangle{
+
+    &:hover{
+        .embb-inner{
+            border-color: $primary-color;
+        }
+        .img{
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+        }
+        .embb-btn.embb-dark {
+            border: solid 1px $primary-color;
+            color: $primary-color;
+        }
+        .embb-btn.embb-white {
+            color: $primary-color;
+        }
+        .embb-style1{
+            .embb-title{
+                color: $primary-color;
+            }
+       
+        }
+        .embb-style2{
+            
+            .embb-title{
+                .embb-tt-lv1{
+                    color: #000;
+                }
+                .embb-tt-lv2{
+                    color: $primary-color;
+                }
+            }
+            
+        }
+        .embb-style3{
+            img{
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+            }
+        }
+        .embb-style4{
+            .embb-title{
+                color: $primary-color;
+            }
+        }
+        .embb-style5{
+            .embb-boder-block{
+                color: #000;
+                border-color: #000;
+            }
+            .embb-capt{
+                color: #000;
+            }
+            .embb-fs36{
+                color: #000;
+            }
+            .embb-fs48{
+                color: $primary-color;
+            }
+            
+        }
+        .embb-style6{
+            left: 25px;
+            top: 25px;
+            bottom: 25px;
+            right: 25px;
+            &:before{
+                left: -10px;
+                top: -10px;
+                bottom: -10px;
+                right: -10px;
+            }
+            .embb-title{
+                color: #000;
+                strong{
+                    color: $primary-color;
+                }
+            }
+        }
+        .embb-style7{
+
+            .embb-title{
+                .embb-tt-lv1{
+                    border-color: $primary-color;
+                    span{
+                        background-color: $primary-color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .embb-style8{
+            .item{
+                overflow: hidden;
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                        -webkit-transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .embb-style9{
+            &:before{
+                border-color: $primary-color; 
+            }
+            
+            .embb-title{
+                strong{
+                    color: #000;
+                }
+            }
+        }
+        .embb-style10{
+            &:after{
+                border-color: $primary-color;
+                top: 15px;
+                left: 15px;
+                bottom: 15px;
+                right: 15px;
+            }
+            &:before{
+                top: 30px;
+                left: 30px;
+                bottom: 30px;
+                right: 30px;
+            }
+        }
+        .embb-style11{
+            .embb-capt{
+                transform: rotate(10deg);
+                -webkit-transform: rotate(10deg);
+                color: #fff;
+            }
+        }
+        .embb-style12{
+          
+            .embb-btn{
+                letter-spacing: 7px;
+            }
+        }
+        .embb-style13{
+            > img{
+                transform: rotate(11deg);
+                -webkit-transform: rotate(11deg);
+            }
+        }
+        .embb-style14{
+           
+            .embb-center{
+                .embb-center{
+                    border-top: solid 1px #000;
+                    border-bottom: solid 1px #000;
+                }
+                
+            }
+        }
+        .embb-style15{
+            .embb-title{
+                color: #000;
+            }
+        }
+        .embb-style16{
+            >.embb-center{
+                border-color: $primary-color;
+                .inner{
+                    &:before{
+                        border-color: $primary-color;
+                    }
+                    
+                }
+            }
+
+        }
+        .embb-style17{
+            
+        }
+        .embb-style18{
+            
+        }
+        
+        .embb-style19{
+            
+        }
+        .embb-style20{
+            &:before,
+            &:after{
+                transform: scale(1);
+                -webkit-transform: scale(1);
+            }
+            img.embb-center{
+              
+            }
+        }
+        
+    }
+}
+.embb-btn{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    height: 25px;
+    line-height: 15px;
+    font-size: 12px;
+    background-color: $primary-color;
+    @include transition(.3s);
+    padding: 5px 15px;
+    min-width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: solid 1px;
+    &.embb-dark{
+        background-color: #000;
+        border-color: #000;
+    }
+    &.embb-white{
+        background-color: #fff;
+        color: #000;
+        border-color: #fff;
+    }
+    &:active{
+        -webkit-box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+}
